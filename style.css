@@ -4,10 +4,25 @@
     box-sizing: border-box;
 }
 
-.gallery {
-    outline: 1px solid red;
+.hidden {
+    display: none;
 }
 
-.carousel {
+.carousel-container {
     outline: 1px solid orange;
+}
+
+.gallery-container {
+    outline: 1px solid red;
+    display: none;
+}
+
+@media screen and (min-width: 640px) {
+    .carousel-container {
+        display: none;
+    }
+
+    .gallery-container {
+        display: block;
+    }
 }
