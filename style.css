@@ -3,3 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.gallery {
+    outline: 1px solid red;
+}
+
+.carousel {
+    outline: 1px solid orange;
+}
