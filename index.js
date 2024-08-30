@@ -13,14 +13,24 @@ puppyBtn.addEventListener("click", puppyClick)
 
 function kittyClick() {
     console.log("kitty button clicked")
+    renderCarousel(kittyArr)
+    renderGallery(kittyArr)
 }
 
 function puppyClick() {
     console.log("puppy button clicked")
+    renderCarousel(puppyArr)
+    renderGallery(puppyArr)
 }
 
 // ⬇️ RENDER FUNCTIONS ⬇️
 
 // render carousel
+function renderCarousel(arr) {
+    console.log(arr)
+}
 
 // render gallery
+function renderGallery(arr) {
+    console.log(arr)
+}
