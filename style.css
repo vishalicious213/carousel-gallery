@@ -36,6 +36,24 @@ button {
     width: 100%;
 }
 
+/* CAROUSEL */
+
+.carousel-container {
+    padding: 0 1rem;
+}
+
+.carousel-controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
+}
+
+.prev:hover, .next:hover {
+    cursor: pointer;
+}
+
 @media screen and (min-width: 640px) {
     .carousel-container {
         display: none;
