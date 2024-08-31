@@ -44,4 +44,13 @@ function renderCarousel(arr) {
 // render gallery
 function renderGallery(arr) {
     console.log(arr)
+    gallery.innerHTML = ""
+
+    const critters = arr.map(item => `
+        <section class="critter">
+            <img src="img/${item}" alt="">
+        </section>
+    `).join("")
+
+    gallery.innerHTML += critters
 }
