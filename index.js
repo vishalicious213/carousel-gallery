@@ -33,7 +33,7 @@ function renderCarousel(arr) {
     carousel.innerHTML = ""
 
     const critters = arr.map(item => `
-        <section class="critter">
+        <section class="carousel-critter">
             <img src="img/${item}" alt="">
         </section>
     `)
@@ -47,7 +47,7 @@ function renderGallery(arr) {
     gallery.innerHTML = ""
 
     const critters = arr.map(item => `
-        <section class="critter">
+        <section class="gallery-critter">
             <img src="img/${item}" alt="">
         </section>
     `).join("")
