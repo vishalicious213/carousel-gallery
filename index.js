@@ -67,6 +67,8 @@ function renderCarousel(arr, slideNum = 0) {
     
     carouselImg.innerHTML = ""
     carouselImg.appendChild(critterToShow)
+
+    renderDots(arr.length)
 }
 
 // render gallery
