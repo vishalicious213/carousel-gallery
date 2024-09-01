@@ -48,6 +48,10 @@ function changeSlide(n) {
     }
 }
 
+function changeSlideFromDots(num) {
+    console.log(num)
+}
+
 // ⬇️ RENDER FUNCTIONS ⬇️
 
 // render carousel
@@ -89,7 +93,7 @@ function renderDots(num) {
     
     for (i = 0; i < num; i++) {
         dotsContainer.innerHTML += `
-            <span class="dot" onclick=""></span>
+            <span class="dot" onclick="changeSlideFromDots(${i})"></span>
         `
     }
 }
