@@ -1,6 +1,7 @@
 const kittyBtn = document.getElementById("kitty-btn")
 const puppyBtn = document.getElementById("puppy-btn")
 const carousel = document.getElementById("carousel-container")
+const carouselImg = document.getElementById("carousel-images")
 const gallery = document.getElementById("gallery-container")
 
 const kittyArr = ["kitty-1.jpg", "kitty-2.jpg", "kitty-3.jpg"]
@@ -30,7 +31,7 @@ function puppyClick() {
 // render carousel
 function renderCarousel(arr) {
     console.log(arr)
-    carousel.innerHTML = ""
+    carouselImg.innerHTML = ""
 
     const critters = arr.map(item => `
         <section class="carousel-critter">
@@ -38,7 +39,7 @@ function renderCarousel(arr) {
         </section>
     `)
 
-    carousel.innerHTML += critters
+    carouselImg.innerHTML += critters
 }
 
 // render gallery
