@@ -1,5 +1,7 @@
 # Carousel / Gallery
 
+Deployed at: https://vish213-critters.netlify.app/
+
 Testing a responsive carousel / gallery switch
 - Should default to carousel
 - At greater widths, switch from carousel to gallery
