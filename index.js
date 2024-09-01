@@ -17,22 +17,18 @@ puppyBtn.addEventListener("click", puppyClick)
 // ⬇️ EVENT HANDLERS ⬇️
 
 function kittyClick() {
-    console.log("kitty button clicked")
-    renderCarousel(kittyArr)
+    renderCarousel(kittyArr, slideIndex)
     renderGallery(kittyArr)
     dataSet = kittyArr
 }
 
 function puppyClick() {
-    console.log("puppy button clicked")
-    renderCarousel(puppyArr)
+    renderCarousel(puppyArr, slideIndex)
     renderGallery(puppyArr)
     dataSet = puppyArr
 }
 
 function changeSlide(n) {
-    console.log("change slide", n)
-
     if (n === 1) {
         slideIndex ++
         if (slideIndex > dataSet.length - 1) {
@@ -54,7 +50,6 @@ function changeSlide(n) {
 
 // render carousel
 function renderCarousel(arr, slideNum = 0) {
-    console.log(arr, slideNum)
     carouselImg.innerHTML = ""
 
     const critters = arr.map(item => `
@@ -74,7 +69,6 @@ function renderCarousel(arr, slideNum = 0) {
 
 // render gallery
 function renderGallery(arr) {
-    // console.log(arr)
     gallery.innerHTML = ""
 
     const critters = arr.map(item => `
@@ -85,3 +79,6 @@ function renderGallery(arr) {
 
     gallery.innerHTML += critters
 }
+
+renderCarousel(dataSet, slideIndex)
+renderGallery(dataSet)
