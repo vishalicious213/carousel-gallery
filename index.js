@@ -3,10 +3,11 @@ const puppyBtn = document.getElementById("puppy-btn")
 const carousel = document.getElementById("carousel-container")
 const carouselImg = document.getElementById("carousel-images")
 const gallery = document.getElementById("gallery-container")
-let slideIndex = 0
-
 const kittyArr = ["kitty-1.jpg", "kitty-2.jpg", "kitty-3.jpg"]
 const puppyArr = ["puppy-1.jpg", "puppy-2.jpg", "puppy-3.jpg"]
+let slideIndex = 0
+let dataSet = kittyArr
+
 
 // ⬇️ EVENT LISTENERS ⬇️
 
@@ -19,16 +20,28 @@ function kittyClick() {
     console.log("kitty button clicked")
     renderCarousel(kittyArr)
     renderGallery(kittyArr)
+    dataSet = kittyArr
 }
 
 function puppyClick() {
     console.log("puppy button clicked")
     renderCarousel(puppyArr)
     renderGallery(puppyArr)
+    dataSet = puppyArr
 }
 
 function changeSlide(n) {
     console.log("change slide", n)
+
+    if (n === 1) {
+        slideIndex ++
+        renderCarousel(dataSet, slideIndex)
+    }
+
+    if (n === -1) {
+        slideIndex --
+        renderCarousel(dataSet, slideIndex)
+    }
 }
 
 // ⬇️ RENDER FUNCTIONS ⬇️
@@ -55,7 +68,7 @@ function renderCarousel(arr, slideNum = 0) {
 
 // render gallery
 function renderGallery(arr) {
-    console.log(arr)
+    // console.log(arr)
     gallery.innerHTML = ""
 
     const critters = arr.map(item => `
