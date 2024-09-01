@@ -48,9 +48,9 @@ function renderCarousel(arr, slideNum = 0) {
 
     let critterToShow = document.getElementsByClassName("carousel-critter")[slideNum]
     critterToShow.className = "carousel-critter"
-    console.log(critterToShow)
-
-    carouselImg.innerHTML += critterToShow
+    
+    carouselImg.innerHTML = ""
+    carouselImg.appendChild(critterToShow)
 }
 
 // render gallery
