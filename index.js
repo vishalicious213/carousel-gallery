@@ -49,7 +49,8 @@ function changeSlide(n) {
 }
 
 function changeSlideFromDots(num) {
-    console.log(num)
+    slideIndex = num
+    renderCarousel(dataSet, slideIndex)
 }
 
 // ⬇️ RENDER FUNCTIONS ⬇️
