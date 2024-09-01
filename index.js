@@ -35,11 +35,17 @@ function changeSlide(n) {
 
     if (n === 1) {
         slideIndex ++
+        if (slideIndex > dataSet.length - 1) {
+            slideIndex = 0
+        }
         renderCarousel(dataSet, slideIndex)
     }
 
     if (n === -1) {
         slideIndex --
+        if (slideIndex < 0) {
+            slideIndex = dataSet.length - 1
+        }
         renderCarousel(dataSet, slideIndex)
     }
 }
