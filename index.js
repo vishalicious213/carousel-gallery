@@ -3,11 +3,12 @@ const puppyBtn = document.getElementById("puppy-btn")
 const carousel = document.getElementById("carousel-container")
 const carouselImg = document.getElementById("carousel-images")
 const gallery = document.getElementById("gallery-container")
+
 const kittyArr = ["kitty-1.jpg", "kitty-2.jpg", "kitty-3.jpg"]
 const puppyArr = ["puppy-1.jpg", "puppy-2.jpg", "puppy-3.jpg"]
+
 let slideIndex = 0
 let dataSet = kittyArr
-
 
 // ⬇️ EVENT LISTENERS ⬇️
 
