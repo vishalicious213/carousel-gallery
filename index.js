@@ -3,6 +3,7 @@ const puppyBtn = document.getElementById("puppy-btn")
 const carousel = document.getElementById("carousel-container")
 const carouselImg = document.getElementById("carousel-images")
 const gallery = document.getElementById("gallery-container")
+const dotsContainer = document.getElementById("dot-container")
 
 const kittyArr = ["kitty-1.jpg", "kitty-2.jpg", "kitty-3.jpg"]
 const puppyArr = ["puppy-1.jpg", "puppy-2.jpg", "puppy-3.jpg"]
@@ -79,6 +80,16 @@ function renderGallery(arr) {
     `).join("")
 
     gallery.innerHTML += critters
+}
+
+function renderDots(num) {
+    dotsContainer.innerHTML = ""
+    
+    for (i = 0; i < num; i++) {
+        dotsContainer.innerHTML += `
+            <span class="dot" onclick=""></span>
+        `
+    }
 }
 
 renderCarousel(dataSet, slideIndex)
